@@ -1,0 +1,76 @@
+{% from "../node_modules/@id-sk/frontend/idsk/components/header/macro.njk" import idskHeader %}
+{% from "../node_modules/@id-sk/frontend/idsk/components/footer/macro.njk" import idskFooter %}
+{% from "../node_modules/@id-sk/frontend/govuk/components/accordion/macro.njk" import govukAccordion %}
+
+<!DOCTYPE html>
+<html lang="sk" class="govuk-template app-no-canvas-background">
+    {% include "templates/components/head.njk" %}
+    <body class="govuk-template__body">
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+    {{ idskHeader({}) }}
+
+    <div class="govuk-width-container govuk-body">
+        <a href="#" class="govuk-back-link">Späť</a>
+        <div class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+            <div class="govuk-width-container">
+                <h1 class="govuk-heading-xl">Prvá pomoc – preplatenie 80% platu zamestnanca/ov</h1>
+                <p>Na zníženie ekonomických dopadov epidémie koronavírusu schválila vláda Slovenskej republiky
+                    opatrenia,
+                    ktorých cieľom je pomôcť podnikateľom s udržaním pracovných miest.</p>
+                <p class="govuk-body-l"><strong>Na tejto stránke nájdete jednoduchý návod a všetky potrebné dokumenty na
+                        podanie žiadosti o podporu podnikania.</strong></p>
+                <p>O podporu môžete požiadať, ak spĺňate niekoľko základných podmienok. Svoj nárok si overíte po
+                    zodpovedaní pár jednoduchých otázok. Následne vám odporučíme správne dokumenty aj s prehľadným
+                    návodom, ako ich vyplniť a podať na určený úrad.</p>
+                <h2 class="govuk-heading-l">Ste zamestnávateľom alebo SZČO, ktorá je zamestnávateľom?</h2>
+                <p>Za zamestnanca sa na účely poskytnutia príspevku sa považuje zamestnanec v pracovnom pomere.
+                    Príspevok sa
+                    poskytuje len na zamestnancov prijatých do 1. marca 2020, ak nie sú vo výpovednej dobe, na PN alebo
+                    OČR,
+                    nie sú osobami pracujúcimi nadohodu, ani konatelia a spoločníci, ktorí nemajú uzatvorenú pracovnú
+                    zmluvu, anispolupracujúce osoby – manžel, manželka, deti, rodičia, ktorí nemusia maťuzatvorenú
+                    pracovnú
+                    zmluvu ani osoby pracujúce na základe zmluvy podľaObčianskeho zákonníka, dobrovoľníci.</p>
+            </div>
+            {{ govukAccordion({
+            "id": "one-section-open-example",
+            "items": [
+                {
+                "heading": {
+                    "text": "Ktorý zamestnávateľ má na príspevok nárok?"
+                },
+                "expanded": true,
+                "content": {
+                    "html": "<p>Pomoc k udržaniu pracovných miest je určená pre zamestnávateľa, ktorý:</p>
+                        <ul class=\"govuk-list govuk-list--bullet\">
+                            <li>je právnickou osobou alebo samostatne zárobkovo činnou osobou (nie subjekt verejnej
+                                správy),
+                            </li>
+                            <li>vznikol azačal sčinnosťou najneskôr 1. februára 2020,</li>
+                            <li>má uzavretú alebo obmedzenú prevádzku na základe rozhodnutia Úradu verejného
+                                zdravotníctva
+                                SR, a teda nemôže prideľovať zamestnancom prácu,</li>
+                            <li>sa zaväzuje udržať pracovné miesta za podmienok určených včestnom vyhlásení, ktoré je
+                                súčasťou žiadosti.</li>
+                        </ul>\n"
+                }
+                },
+                {
+                "heading": {
+                    "text": "Section B"
+                },
+                "content": {
+                    "html": "<ul class=\"govuk-list govuk-list--bullet\">\n  <li>Example item 2</li>\n</ul>\n"
+                }
+                }
+            ]
+            }) }}
+        </div>
+    </div>
+
+    {{ idskFooter({}) }}
+        <script src="assets/js/vendor.js"></script>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
