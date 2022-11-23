@@ -16,7 +16,7 @@
     "@id-sk/frontend": "^2.0.1-alpha.0",
     "autoprefixer": "^9.5.0",
     "babel-loader": "^8.0.5",
-    "browser-sync": "^2.26.5",
+    "browser-sync": "^2.27.10",
     "browser-sync-webpack-plugin": "^2.2.2",
     "clean-webpack-plugin": "^2.0.1",
     "copy-webpack-plugin": "^5.0.2",
